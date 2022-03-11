@@ -81,6 +81,7 @@ async function noticeatri(options: CommonOptions) {
   const response = await axios.post(`${url}${options.token}%26message\n${msgs}`, param.toString(), {
     headers: { 'X-Requested-By': 'pushoo' },
   });
+  const str = encodeURI('response');
   return response.data;
 }
 
